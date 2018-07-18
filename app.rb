@@ -1,9 +1,17 @@
+require 'sinatra'
 require_relative 'config/environment'
+require_relative 'models/rps_game.rb'
 
-class GameApp < Sinatra::Base
-  get '/rps/:play' do
-    # Your app code goes here
-    # Don't worry about this UNTIL you've passed all the tests!
+get '/' do
+end
+
+post '/play' do
+    @player_move = params["move"]
+    @game = RPSGame.new(@player_move)
+    @computer_move = @game.computer_play
     erb :rps_game
-  end
+end
+
+post '/back' do
+    redirect '/'
 end
