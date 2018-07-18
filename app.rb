@@ -3,6 +3,7 @@ require_relative 'config/environment'
 require_relative 'models/rps_game.rb'
 
 get '/' do
+    erb :index
 end
 
 post '/play' do

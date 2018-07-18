@@ -1,4 +1,4 @@
-# Creating Rock, Paper, Scissors
+git clone# Creating Rock, Paper, Scissors
 
 ## Instructions
 
